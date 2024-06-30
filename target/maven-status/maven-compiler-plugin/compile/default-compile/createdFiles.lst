@@ -1,0 +1,9 @@
+web\service\UserService.class
+web\config\HibernateConfig.class
+web\config\AppInit.class
+web\config\WebConfig.class
+web\controller\UserController.class
+web\DAO\UserDao.class
+web\DAO\UserDaolmp.class
+web\model\User.class
+web\service\UserServicelmp.class
