@@ -1,43 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>New User</title>
+    <title>Create user</title>
 </head>
 <body>
-<div align="center">
-    <h2>New Customer</h2>
-    <form action="save" method="post" th:object="${user}">
-        <table border="0" cellpadding="5">
-            <tr>
-                <td>Name:</td>
-                <td><label>
-                    <input type="text" th:field="*{name}"/>
-                </label></td>
-            </tr>
-            <tr>
-                <td>Last Name:</td>
-                <td><label>
-                    <input type="text" th:field="*{last_name}"/>
-                </label></td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td><label>
-                    <input type="text" th:field="*{email}"/>
-                </label></td>
-            </tr>
-            <tr>
-                <td>Age:</td>
-                <td><label>
-                    <input type="text" th:field="*{age}"/>
-                </label></td>
-            </tr>
-            <tr>
-                <td colspan="2"><input type="submit" value="Save"></td>
-            </tr>
-        </table>
-    </form>
-</div>
+<form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
+    <label for="firstName">First name</label>
+    <input type="text" th:field="*{firstName}" id="firstName" placeholder="First Name">
+    <label for="lastName">Last name</label>
+    <input type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name">
+    <input type="submit" value="Create User">
+</form>
 </body>
 </html>
